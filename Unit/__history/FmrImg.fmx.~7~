@@ -1,0 +1,43 @@
+object fmrImage: TfmrImage
+  Left = 0
+  Top = 0
+  Caption = 'ImageGenerator'
+  ClientHeight = 1280
+  ClientWidth = 720
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Top
+    Size.Width = 720.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Rectangle2: TRectangle
+    Align = Bottom
+    Position.Y = 1000.000000000000000000
+    Size.Width = 720.000000000000000000
+    Size.Height = 280.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ImgFundo: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Center
+    Size.Width = 715.000000000000000000
+    Size.Height = 512.000000000000000000
+    Size.PlatformDefault = False
+    object ImgLogo: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Center
+      Size.Width = 256.000000000000000000
+      Size.Height = 256.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end

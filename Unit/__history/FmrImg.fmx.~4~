@@ -1,0 +1,22 @@
+object fmrImage: TfmrImage
+  Left = 0
+  Top = 0
+  Caption = 'Imagem'
+  ClientHeight = 1280
+  ClientWidth = 720
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ImageViewer1: TImageViewer
+    Position.X = 168.000000000000000000
+    Position.Y = 248.000000000000000000
+    Size.Width = 353.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 349.000000000000000000
+    Viewport.Height = 253.000000000000000000
+  end
+end

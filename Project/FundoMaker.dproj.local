@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/07/27 11:39:50.000.745,=D:\Users\Tomazini\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/08/19 22:48:26.000.548,=D:\Users\Tomazini\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/08/19 22:52:59.000.988,C:\Users\Tomazini\Desktop\FMaker\Unit\Principal.fmx=D:\Users\Tomazini\Documents\Embarcadero\Studio\Projects\Unit2.fmx</Transaction>
+    <Transaction>2023/08/19 22:52:59.000.988,C:\Users\Tomazini\Desktop\FMaker\Unit\Principal.pas=D:\Users\Tomazini\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/08/19 22:53:11.000.640,C:\Users\Tomazini\Desktop\FMaker\Project\FundoMaker.dproj=D:\Users\Tomazini\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2023/08/21 02:22:17.000.015,=C:\Users\Tomazini\Desktop\FMaker\Project\Unit1.pas</Transaction>
+    <Transaction>2023/08/21 02:23:09.000.042,C:\Users\Tomazini\Desktop\FMaker\Project\Unit1.pas=C:\Users\Tomazini\Desktop\FMaker\Unit\Img.pas</Transaction>
+    <Transaction>2023/08/21 02:23:09.000.042,C:\Users\Tomazini\Desktop\FMaker\Project\Unit1.fmx=C:\Users\Tomazini\Desktop\FMaker\Unit\Img.fmx</Transaction>
+    <Transaction>2023/08/21 02:24:43.000.677,C:\Users\Tomazini\Desktop\FMaker\Unit\Img.fmx=C:\Users\Tomazini\Desktop\FMaker\Unit\FmrImg.fmx</Transaction>
+    <Transaction>2023/08/21 02:24:43.000.677,C:\Users\Tomazini\Desktop\FMaker\Unit\Img.pas=C:\Users\Tomazini\Desktop\FMaker\Unit\FmrImg.pas</Transaction>
+  </Transactions>
+</BorlandProject>

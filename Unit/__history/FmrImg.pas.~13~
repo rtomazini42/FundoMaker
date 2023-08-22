@@ -1,0 +1,157 @@
+unit FmrImg;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.ExtCtrls, System.ImageList, FMX.ImgList,
+  FMX.Controls.Presentation, FMX.Edit, FMX.ComboEdit, FMX.StdCtrls;
+
+type
+  TfmrImage = class(TForm)
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    ImgFundo: TImage;
+    ImgLogo: TImage;
+    ComboEdit1: TComboEdit;
+    Rectangle3: TRectangle;
+    RecFundoLogo: TRectangle;
+    Layout1: TLayout;
+    Layout2: TLayout;
+    ComboEdit2: TComboEdit;
+    Layout3: TLayout;
+    ComboEdit3: TComboEdit;
+    Rectangle4: TRectangle;
+    Label1: TLabel;
+    procedure FormShow(Sender: TObject);
+    procedure ComboEdit1Change(Sender: TObject);
+    procedure ComboEdit3Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    var
+     Logo: TBitmap;
+  end;
+
+var
+  fmrImage: TfmrImage;
+
+
+implementation
+
+{$R *.fmx}
+
+procedure TfmrImage.ComboEdit1Change(Sender: TObject);
+var
+  SelectedImage: string;
+  Bitmap: TBitmap;
+  ProjectFolderPath: string;
+begin
+  SelectedImage := ComboEdit1.Text; // Nome do arquivo selecionado
+
+  if SelectedImage <> '' then
+  begin
+    // Caminho da pasta de imagens
+    ProjectFolderPath := ExtractFilePath(ParamStr(0)) + 'Imgs\Background';
+
+    Bitmap := TBitmap.Create;
+    try
+      Bitmap.LoadFromFile(ProjectFolderPath + '\' + SelectedImage);
+      ImgFundo.Bitmap.Assign(Bitmap);
+    finally
+      Bitmap.Free;
+    end;
+  end;
+end;
+
+
+procedure TfmrImage.ComboEdit3Change(Sender: TObject);
+begin
+  if ComboEdit3.Text = 'Vazio' then
+  begin
+    RecFundoLogo.Visible := False;
+  end
+  else if ComboEdit3.Text = 'Preto 30%' then
+  begin
+    RecFundoLogo.Visible := True;
+    RecFundoLogo.Fill.Color := TAlphaColors.Black;
+    RecFundoLogo.Opacity := 0.3;
+  end
+  else if ComboEdit3.Text = 'Preto 50%' then
+  begin
+    RecFundoLogo.Visible := True;
+    RecFundoLogo.Fill.Color := TAlphaColors.Black;
+    RecFundoLogo.Opacity := 0.5;
+  end
+  else if ComboEdit3.Text = 'Preto 70%' then
+  begin
+    RecFundoLogo.Visible := True;
+    RecFundoLogo.Fill.Color := TAlphaColors.Black;
+    RecFundoLogo.Opacity := 0.7;
+  end
+  else if ComboEdit3.Text = 'Preto 100%' then
+  begin
+    RecFundoLogo.Visible := True;
+    RecFundoLogo.Fill.Color := TAlphaColors.Black;
+    RecFundoLogo.Opacity := 1.0;
+  end
+  else if ComboEdit3.Text = 'Branco 30%' then
+  begin
+    RecFundoLogo.Visible := True;
+    RecFundoLogo.Fill.Color := TAlphaColors.White;
+    RecFundoLogo.Opacity := 0.3;
+  end
+  else if ComboEdit3.Text = 'Branco 50%' then
+  begin
+    RecFundoLogo.Visible := True;
+    RecFundoLogo.Fill.Color := TAlphaColors.White;
+    RecFundoLogo.Opacity := 0.5;
+  end
+  else if ComboEdit3.Text = 'Branco 70%' then
+  begin
+    RecFundoLogo.Visible := True;
+    RecFundoLogo.Fill.Color := TAlphaColors.White;
+    RecFundoLogo.Opacity := 0.7;
+  end
+  else if ComboEdit3.Text = 'Branco 100%' then
+  begin
+    RecFundoLogo.Visible := True;
+    RecFundoLogo.Fill.Color := TAlphaColors.White;
+    RecFundoLogo.Opacity := 1.0;
+  end;
+end;
+
+procedure TfmrImage.FormShow(Sender: TObject);
+var
+  ProjectFolderPath: string;
+  SearchRec: TSearchRec;
+begin
+  ImgLogo.Bitmap.Assign(Logo);
+
+  // Caminho da pasta de imagens
+  ProjectFolderPath := ExtractFilePath(ParamStr(0)) + 'Imgs\Background';
+
+  // Limpa o ComboBox
+  ComboEdit1.Items.Clear;
+
+  if FindFirst(IncludeTrailingPathDelimiter(ProjectFolderPath) + '*.*', faAnyFile, SearchRec) = 0 then
+  begin
+    try
+      repeat
+        if (SearchRec.Name <> '.') and (SearchRec.Name <> '..') then
+          ComboEdit1.Items.Add(SearchRec.Name);
+      until FindNext(SearchRec) <> 0;
+    finally
+      FindClose(SearchRec);
+    end;
+  end;
+
+  Self.Updated;
+end;
+
+
+
+
+end.

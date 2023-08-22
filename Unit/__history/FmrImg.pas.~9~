@@ -1,0 +1,57 @@
+unit FmrImg;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, FMX.ExtCtrls, System.ImageList, FMX.ImgList;
+
+type
+  TfmrImage = class(TForm)
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    ImgFundo: TImage;
+    ImgLogo: TImage;
+    ImageList1: TImageList;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    var
+     Logo: TBitmap;
+  end;
+
+var
+  fmrImage: TfmrImage;
+
+
+implementation
+
+{$R *.fmx}
+
+procedure TfmrImage.FormShow(Sender: TObject);
+var
+  Bitmap: TBitmap;
+begin
+  ImgLogo.Bitmap.Assign(Logo);
+
+  Bitmap := TBitmap.Create;
+  try
+    // Carrega a imagem do arquivo para o TBitmap
+    Bitmap.LoadFromFile('/Imgs/Background/fundo.jpg'); // Substitua pelo caminho do arquivo desejado
+
+    // Atribui o TBitmap ao componente TImage ou TImageViewer
+    ImgFundo.Bitmap.Assign(Bitmap);
+  finally
+    Bitmap.Free;
+  end;
+
+  Self.Updated;
+end;
+
+
+
+
+end.

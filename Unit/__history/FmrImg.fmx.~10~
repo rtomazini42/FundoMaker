@@ -1,0 +1,230 @@
+object fmrImage: TfmrImage
+  Left = 0
+  Top = 0
+  Caption = 'ImageGenerator'
+  ClientHeight = 1280
+  ClientWidth = 960
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Color = claBlack
+    Size.Width = 960.000000000000000000
+    Size.Height = 241.000000000000000000
+    Size.PlatformDefault = False
+    object Layout1: TLayout
+      Align = MostTop
+      Margins.Top = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 960.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object ComboEdit1: TComboEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = MostRight
+        TabOrder = 0
+        ItemHeight = 19.000000000000000000
+        ItemIndex = -1
+        TextSettings.Font.Family = 'Tahoma'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Position.X = 494.000000000000000000
+        StyledSettings = [FontColor]
+        Size.Width = 466.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = ComboEdit1Change
+      end
+      object TLabel
+        Align = Left
+        StyledSettings = []
+        Size.Width = 305.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Tahoma'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Fundo:'
+        TabOrder = 1
+      end
+    end
+    object Layout2: TLayout
+      Align = MostTop
+      Margins.Top = 5.000000000000000000
+      Position.Y = 161.000000000000000000
+      Size.Width = 960.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object ComboEdit2: TComboEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = MostRight
+        TabOrder = 0
+        ItemHeight = 19.000000000000000000
+        Items.Strings = (
+          ''
+          'Topo Esquerda'
+          'Topo Centro'
+          'Topo Direta'
+          'Meio  Esquerda'
+          'Meio  Centro'
+          'Meio  Direta'
+          'Baixo  Esquerda'
+          'Baixo  Centro'
+          'Baixo  Direta')
+        ItemIndex = -1
+        TextSettings.Font.Family = 'Tahoma'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Position.X = 494.000000000000000000
+        StyledSettings = [FontColor]
+        Size.Width = 466.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = ComboEdit1Change
+      end
+      object TLabel
+        Align = Left
+        StyledSettings = []
+        Size.Width = 305.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Tahoma'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Local da logo:'
+        TabOrder = 1
+      end
+    end
+    object Layout3: TLayout
+      Align = MostTop
+      Margins.Top = 5.000000000000000000
+      Position.Y = 83.000000000000000000
+      Size.Width = 960.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ComboEdit3: TComboEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = MostRight
+        TabOrder = 0
+        ItemHeight = 19.000000000000000000
+        Items.Strings = (
+          ''
+          'Vazio'
+          'Preto 30%'
+          'Preto 50%'
+          'Preto 70%'
+          'Preto 100%'
+          'Branco 30%'
+          'Branco 50%'
+          'Branco 70%'
+          'Branco 100%')
+        ItemIndex = -1
+        TextSettings.Font.Family = 'Tahoma'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Position.X = 494.000000000000000000
+        StyledSettings = [FontColor]
+        Size.Width = 466.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = ComboEdit3Change
+      end
+      object TLabel
+        Align = Left
+        StyledSettings = []
+        Size.Width = 305.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Tahoma'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Destacador do logo'
+        TabOrder = 1
+      end
+    end
+  end
+  object Rectangle2: TRectangle
+    Align = Bottom
+    Fill.Color = claBlack
+    Position.Y = 1200.000000000000000000
+    Size.Width = 960.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Rectangle3: TRectangle
+    Align = Center
+    Fill.Color = claNull
+    Size.Width = 715.000000000000000000
+    Size.Height = 512.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Thickness = 5.000000000000000000
+    object ImgFundo: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Size.Width = 715.000000000000000000
+      Size.Height = 512.000000000000000000
+      Size.PlatformDefault = False
+      object RecFundoLogo: TRectangle
+        Align = Center
+        Fill.Color = claBlack
+        Opacity = 0.500000000000000000
+        Size.Width = 715.000000000000000000
+        Size.Height = 256.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object ImgLogo: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Center
+        Size.Width = 256.000000000000000000
+        Size.Height = 256.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+      end
+    end
+  end
+  object Rectangle4: TRectangle
+    Align = Bottom
+    Fill.Color = claBlack
+    Margins.Left = 250.000000000000000000
+    Margins.Right = 250.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Position.X = 250.000000000000000000
+    Position.Y = 1096.000000000000000000
+    Size.Width = 460.000000000000000000
+    Size.Height = 84.000000000000000000
+    Size.PlatformDefault = False
+    XRadius = 20.000000000000000000
+    YRadius = 20.000000000000000000
+    object Label1: TLabel
+      Align = Center
+      StyledSettings = []
+      Size.Width = 247.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Tahoma'
+      TextSettings.Font.Size = 28.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Criar Imagem'
+      TabOrder = 0
+    end
+  end
+end
